@@ -27,7 +27,7 @@ def main():
     if not response.usage_metadata:
         raise RuntimeError("No usage metadata found in the response")
     if args.verbose is True:
-        print(f"User Prompt: {args.prompt}")
+        print(f"User prompt: {args.prompt}")
         print("Prompt tokens: " + str(response.usage_metadata.prompt_token_count))
         print("Response tokens: " + str(response.usage_metadata.candidates_token_count))
     print("Response: " + "\n" + response.text)
